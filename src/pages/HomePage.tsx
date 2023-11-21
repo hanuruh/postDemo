@@ -78,11 +78,10 @@ const HomePage = () => {
             .catch(e => console.log("Failed to fetch posts and comments: ", e))
     }, []);
 
-
     return(
         <Container>
             <Row>
-                <Col className={"viewWrapper"}>
+                <Col className={"view-wrapper"}>
                     <Filter
                         filterValue={filterValue}
                         filterType={filterType}
@@ -101,7 +100,7 @@ const HomePage = () => {
                         )
                     })}
                 </Col>
-                <Col className={"viewWrapper"}>
+                <Col className={"view-wrapper"}>
                     {commentsFromSelectedPost.map((c: Comment, index: number) => {
                         return (
                             <div key={index} onClick={() => selectPost(c.id)}>

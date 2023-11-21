@@ -1,4 +1,4 @@
-.postWrapper {
+.post-wrapper {
     border-style: solid;
     border-width: 1px;
     border-color: #a2a2a2;
@@ -7,11 +7,11 @@
     margin: 10px;
 }
 
-.selectedPostColor {
+.selected-post-color {
     background-color: #eaeaea;
 }
 
-.commentWrapper {
+.comment-wrapper {
     border-style: solid;
     border-width: 1px;
     border-color: #a2a2a2;
@@ -20,18 +20,25 @@
     margin: 10px;
 }
 
-.inputBtnColor {
+.input-btn-color {
     background-color: #2c9191;
     border-color: #57d5d5;
     padding-bottom: 4px;
     padding-top: 4px;
 }
 
-.inputWrapper {
+.input-wrapper {
     margin-bottom: 5px;
 }
 
-.viewWrapper {
+.input {
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #343434;
+}
+
+.view-wrapper {
     max-height: 100vh;
     overflow-y: scroll;
 }
@@ -43,4 +50,13 @@
     border-color: #a2a2a2;
     border-style: solid;
     margin-bottom: 3px;
+}
+
+.filter {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.full-width {
+    width: 100%;
 }

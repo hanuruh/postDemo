@@ -24,7 +24,7 @@ const CommentWrapper = ({body, postId, id, replies, tags}: Comment) => {
     }
 
     return(
-        <Row className={"commentWrapper"}>
+        <Row className={"comment-wrapper"}>
             <Stack direction="horizontal" gap={2}>
                 {tags.map((t: string, index: number) => {
                     return <Tag key={index} value={t}/>

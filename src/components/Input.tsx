@@ -26,17 +26,11 @@ const Input = ({
 }: InputProps) => {
 
     return(
-        <Row className={"inputWrapper"}>
+        <Row className={"input-wrapper"}>
             <Col md={colWidth}>
                 <input
-                    style={{
-                        padding: padding,
-                        borderRadius: 5,
-                        borderStyle: "solid",
-                        borderWidth: 1,
-                        borderColor: "black",
-                        width: "100%"
-                    }}
+                    className={"input full-width"}
+                    style={{padding}}
                     placeholder={placeholder}
                     value={value}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
@@ -45,7 +39,7 @@ const Input = ({
             {includeBtn &&
                 <Col>
                     <Button
-                        className={"inputBtnColor"}
+                        className={"input-btn-color"}
                         size={btnSmall ? "sm" : "lg"}
                         onClick={onPressBtn}
                     >{btnText}</Button>

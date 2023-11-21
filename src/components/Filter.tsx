@@ -25,7 +25,7 @@ const Filter = ({
 }: FilterProps) => {
 
     return(
-        <Row style={{marginTop: 10, marginBottom: 10}}>
+        <Row className={"filter"}>
             <Col md={5}>
                 <Input
                     value={filterValue}
@@ -36,7 +36,7 @@ const Filter = ({
                 />
             </Col>
             <Col>
-                <ButtonGroup style={{width: "100%"}}>
+                <ButtonGroup className={"full-width"}>
                     {Object.values(filters).map((filter, index: number) => (
                         <ToggleButton
                             className={"filter"}
