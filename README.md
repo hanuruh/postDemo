@@ -1,6 +1,10 @@
 # List of social media objects
 Post project built for interview
 
+## Setup
+The dist folder has been added for easier build, simply run `serve -s dist`
+
+
 ## Summary
 Display of social medial posts with comments where the user can add replies and tags to them. A suggestion of tags is available and user can also filter posts by username, user id or body.
 
