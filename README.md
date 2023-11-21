@@ -18,6 +18,6 @@ This project was built using [React](https://react.dev/) and [TypeScript](https:
 - Design home page structure, split screen between two views and basic display of Posts and Comments (20 minutes)
 - Ability to add replies to comment and display (30 minutes)
 - Ability to add tags to comments and suggested tags (20 minutes)
-- Ability to filter posts (20 minutes)
+- Ability to filter posts (30 minutes)
 - Testing done on initial state of the Home page and filtering (30 minutes)
 - Additional styling (30 minutes)
