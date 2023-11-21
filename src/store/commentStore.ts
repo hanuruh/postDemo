@@ -1,13 +1,19 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {Comment} from "../types/Comment";
 
+type commentState = {
+    comments: Comment[][];
+    suggestedTags: string[];
+}
+
+const initialState : commentState = {
+    comments: [[]],
+    suggestedTags: ["#animals", "#funny", "#christmas", "#computer", "#food", "#news", "#politics"]
+};
 
 const commentSlice = createSlice({
     name: 'comment',
-    initialState: {
-        comments: [],
-        suggestedTags: ["#animals", "#funny", "#christmas", "#computer", "#food", "#news", "#politics"]
-    },
+    initialState,
     reducers: {
         saveCommentFromPost: (state, action: PayloadAction<[Comment[], number]>) => {
             const [comments, postId] = action.payload;
@@ -22,7 +28,7 @@ const commentSlice = createSlice({
             state.comments[postId].find((c: Comment) => c.id == commentId).tags.push("#" + tag);
 
             if(!state.suggestedTags.includes(tag)){
-                state.suggestedTags.push(tag);
+                state.suggestedTags.push("#" + tag);
             }
         },
     },

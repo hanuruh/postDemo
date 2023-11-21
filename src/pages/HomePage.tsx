@@ -35,7 +35,6 @@ const HomePage = () => {
         setSelectedPost(postId);
         if(!comments[postId]){
             const newComments = await getCommentsFromPost(postId);
-            console.log(newComments)
             dispatch(saveCommentFromPost([newComments, postId]));
         }else{
             setCommentsFromSelectedPost(comments[postId])
@@ -58,7 +57,7 @@ const HomePage = () => {
                 case filters.TEXT_BODY:
                     return posts.filter((p: Post) => p.body.includes(filterValue));
                 case filters.USER_ID:
-                    return posts.filter((p: Post) => p.userId == Number(filterValue));
+                    return posts.filter((p: Post) => p.userId == parseInt(filterValue));
                 case filters.NONE:
                 default:
                     return posts;
@@ -93,7 +92,11 @@ const HomePage = () => {
                     {users.length > 0 && filterPosts().map((p: Post, index: number) => {
                         return (
                             <div key={index} onClick={() => selectPost(p.id)}>
-                                <PostWrapper username={users[p.userId - 1]} {...p}/>
+                                <PostWrapper
+                                    isSelected={selectedPost == p.id}
+                                    username={users[p.userId - 1]}
+                                    {...p}
+                                />
                             </div>
                         )
                     })}

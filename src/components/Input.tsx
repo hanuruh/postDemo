@@ -39,7 +39,7 @@ const Input = ({
                     }}
                     placeholder={placeholder}
                     value={value}
-                    onChange={e => onChange(e.target.value)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
                 />
             </Col>
             {includeBtn &&

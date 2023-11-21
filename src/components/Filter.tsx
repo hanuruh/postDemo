@@ -40,7 +40,7 @@ const Filter = ({
                     {Object.values(filters).map((filter, index: number) => (
                         <ToggleButton
                             className={"filter"}
-                            variant={"secondaryc"}
+                            variant={"secondary"}
                             key={index}
                             id={`radio-${index}`}
                             type="radio"

@@ -14,7 +14,6 @@ const SuggestedTags = ({customTag, addNewTag}: SuggestedTagsProps) => {
     const [suggestedTagsFiltered, setFilterSuggestedTags] = useState<string[]>([]);
 
     const filterSuggestedTags = () => {
-        console.log(customTag)
         if(customTag.length > 0){
             setFilterSuggestedTags(suggestedTags.filter(t => t.includes(customTag)).slice(0, 5));
         }else{

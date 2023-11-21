@@ -7,7 +7,12 @@ type ReplyProps = {
 const Reply = ({value}:ReplyProps) => {
 
     return(
-        <p>{value}</p>
+        <div>
+            <b><small>Your reply</small></b>
+            <div className={"reply"}>
+                <p >{value}</p>
+            </div>
+        </div>
     )
 };
 

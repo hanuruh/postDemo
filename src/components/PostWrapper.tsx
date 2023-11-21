@@ -4,12 +4,12 @@ import React from "react";
 
 interface PostWrapperProps extends Post {
     username: string;
+    isSelected: boolean;
 }
 
-const PostWrapper = ({title, body, username}: PostWrapperProps) => {
-
+const PostWrapper = ({title, body, username, isSelected}: PostWrapperProps) => {
     return(
-        <Row className={"postWrapper"}>
+        <Row className={`postWrapper ${isSelected? "selectedPostColor" : ""}`}>
             <p>{username}</p>
             <h3>{title}</h3>
             <p>{body}</p>
