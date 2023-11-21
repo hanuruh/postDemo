@@ -3,12 +3,13 @@ import {Badge} from "react-bootstrap";
 
 type TagProps = {
     value: string;
+    pointer?: boolean;
 }
 
-const Tag = ({value}:TagProps) => {
+const Tag = ({value, pointer = true}:TagProps) => {
 
     return(
-        <Badge bg="secondary">{value}</Badge>
+        <Badge className={pointer ? "cursor-pointer" : ""} bg="secondary">{value}</Badge>
     )
 };
 

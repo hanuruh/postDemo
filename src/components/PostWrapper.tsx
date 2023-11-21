@@ -9,7 +9,7 @@ interface PostWrapperProps extends Post {
 
 const PostWrapper = ({title, body, username, isSelected}: PostWrapperProps) => {
     return(
-        <Row className={`post-wrapper ${isSelected ? "selected-post-color" : ""}`}>
+        <Row className={`post-wrapper cursor-pointer ${isSelected ? "selected-post-color" : ""}`}>
             <p>{username}</p>
             <h3>{title}</h3>
             <p>{body}</p>

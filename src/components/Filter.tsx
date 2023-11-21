@@ -28,6 +28,7 @@ const Filter = ({
         <Row className={"filter"}>
             <Col md={5}>
                 <Input
+                    padding={8}
                     value={filterValue}
                     placeholder={"Filter posts"}
                     onChange={value => handleFilterValueChange(value)}

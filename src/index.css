@@ -7,6 +7,10 @@
     margin: 10px;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .selected-post-color {
     background-color: #eaeaea;
 }
@@ -53,7 +57,7 @@
 }
 
 .filter {
-    margin-top: 10px;
+    padding-top: 10px;
     margin-bottom: 10px;
 }
 

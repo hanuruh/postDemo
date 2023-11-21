@@ -8,7 +8,7 @@ type commentState = {
 
 const initialState : commentState = {
     comments: [[]],
-    suggestedTags: ["#animals", "#funny", "#christmas", "#computer", "#food", "#news", "#politics"]
+    suggestedTags: ["#laudantium", "#enim", "#quasi", "#est", "#quidem", "#magnam"]
 };
 
 const commentSlice = createSlice({
