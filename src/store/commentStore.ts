@@ -25,10 +25,11 @@ const commentSlice = createSlice({
         },
         addTag: (state, action: PayloadAction<[number, number, string]>) => {
             const [postId, commentId, tag] = action.payload;
-            state.comments[postId].find((c: Comment) => c.id == commentId).tags.push("#" + tag);
+            const newTag = tag.includes("#") ? tag : "#" + tag;
+            state.comments[postId].find((c: Comment) => c.id == commentId).tags.push(newTag);
 
-            if(!state.suggestedTags.includes(tag)){
-                state.suggestedTags.push("#" + tag);
+            if(!state.suggestedTags.includes(newTag)){
+                state.suggestedTags.push(newTag);
             }
         },
     },
