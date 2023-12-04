@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+%cursor-pointer {
+  cursor: pointer;
+}
+
+%border {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $black;
+}

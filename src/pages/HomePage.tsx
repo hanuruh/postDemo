@@ -53,9 +53,9 @@ const HomePage = () => {
         if(filterValue.length > 0){
             switch (filterType) {
                 case filters.USERNAME:
-                    return posts.filter((p: Post) => users[p.userId - 1].includes(filterValue));
+                    return posts.filter((p: Post) => users[p.userId - 1].toLowerCase().includes(filterValue.toLowerCase()));
                 case filters.TEXT_BODY:
-                    return posts.filter((p: Post) => p.body.includes(filterValue));
+                    return posts.filter((p: Post) => p.body.toLowerCase().includes(filterValue.toLowerCase()));
                 case filters.USER_ID:
                     return posts.filter((p: Post) => p.userId == parseInt(filterValue));
                 case filters.NONE:
@@ -103,7 +103,7 @@ const HomePage = () => {
                 <Col className={"view-wrapper"}>
                     {commentsFromSelectedPost.map((c: Comment, index: number) => {
                         return (
-                            <div key={index} onClick={() => selectPost(c.id)}>
+                            <div key={index} onClick={() => selectPost(c.postId)}>
                                 <CommentWrapper {...c}/>
                             </div>
                         )

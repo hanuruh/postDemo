@@ -1,0 +1,8 @@
+@use "../globals/extends" as *;
+
+.comment-wrapper {
+  @extend %border;
+  border-color: #a2a2a2;
+  padding:  10px;
+  margin: 10px;
+}

@@ -1,6 +1,6 @@
 import {Comment} from "../types/Comment";
 import {Row, Stack} from "react-bootstrap";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useAppDispatch} from "../store/store";
 import {addReply, addTag} from "../store/commentStore";
 import Input from "./Input";
@@ -22,6 +22,11 @@ const CommentWrapper = ({body, postId, id, replies, tags}: Comment) => {
         dispatch(addTag([postId, id, predefinedTag ?? tag]));
         setTag("");
     }
+
+    useEffect(() => {
+        setReply("")
+        setTag("")
+    }, [postId]);
 
     return(
         <Row className={"comment-wrapper"}>

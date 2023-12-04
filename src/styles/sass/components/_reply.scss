@@ -1,0 +1,9 @@
+@use "../globals/variables" as *;
+@use "../globals/extends" as *;
+
+.reply {
+  @extend %border;
+  padding: 5px;
+  border-color: $light-grey;
+  margin-bottom: 3px;
+}

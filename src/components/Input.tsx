@@ -19,7 +19,7 @@ const Input = ({
    onChange,
    onPressBtn,
    padding = 6,
-   colWidth = 8,
+   colWidth = 5,
    btnSmall = false,
    includeBtn = true,
    placeholder = ""

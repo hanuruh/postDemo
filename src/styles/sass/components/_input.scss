@@ -1,0 +1,17 @@
+@use '../globals/variables' as *;
+@use '../globals/extends' as *;
+
+.input-btn-color {
+  background-color: $turquoise;
+  border-color: $cyan;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.input-wrapper {
+  margin-bottom: 5px;
+}
+
+.input {
+  @extend %border;
+}

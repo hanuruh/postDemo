@@ -15,7 +15,7 @@ const SuggestedTags = ({customTag, addNewTag}: SuggestedTagsProps) => {
 
     const filterSuggestedTags = () => {
         if(customTag.length > 0){
-            setFilterSuggestedTags(suggestedTags.filter(t => t.includes(customTag)).slice(0, 5));
+            setFilterSuggestedTags(suggestedTags.filter(t => t.toLowerCase().includes(customTag.toLowerCase())).slice(0, 5));
         }else{
             setFilterSuggestedTags([]);
         }
